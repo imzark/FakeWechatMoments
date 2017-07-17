@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ZRKBaseViewController.h
 //  FakeMoments
 //
 //  Created by Zark on 2017/7/17.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ZRKBaseViewController : UIViewController
 
 @end
-

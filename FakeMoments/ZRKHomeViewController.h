@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ZRKHomeViewController.h
 //  FakeMoments
 //
 //  Created by Zark on 2017/7/17.
 //  Copyright © 2017年 Zarky. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZRKBaseViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ZRKHomeViewController : ZRKBaseViewController
 
 @end
-

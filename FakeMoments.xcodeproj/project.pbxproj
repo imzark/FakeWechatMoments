@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		58F792041F1CEBDF0047D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792031F1CEBDF0047D760 /* main.m */; };
 		58F792071F1CEBDF0047D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792061F1CEBDF0047D760 /* AppDelegate.m */; };
-		58F7920A1F1CEBDF0047D760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792091F1CEBDF0047D760 /* ViewController.m */; };
-		58F7920D1F1CEBDF0047D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F7920B1F1CEBDF0047D760 /* Main.storyboard */; };
-		58F7920F1F1CEBDF0047D760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F7920E1F1CEBDF0047D760 /* Assets.xcassets */; };
-		58F792121F1CEBDF0047D760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F792101F1CEBDF0047D760 /* LaunchScreen.storyboard */; };
 		58F7921D1F1CEBDF0047D760 /* FakeMomentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7921C1F1CEBDF0047D760 /* FakeMomentsTests.m */; };
 		58F792281F1CEBDF0047D760 /* FakeMomentsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792271F1CEBDF0047D760 /* FakeMomentsUITests.m */; };
+		58F792371F1CECE00047D760 /* ZRKRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792361F1CECE00047D760 /* ZRKRootTabBarController.m */; };
+		58F7923A1F1CF5BE0047D760 /* ZRKBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792391F1CF5BE0047D760 /* ZRKBaseNavigationController.m */; };
+		58F7923D1F1CF9AD0047D760 /* ZRKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7923C1F1CF9AD0047D760 /* ZRKHomeViewController.m */; };
+		58F792401F1CF9BE0047D760 /* ZRKContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7923F1F1CF9BE0047D760 /* ZRKContactsViewController.m */; };
+		58F792431F1CF9CC0047D760 /* ZRKDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792421F1CF9CC0047D760 /* ZRKDiscoveryViewController.m */; };
+		58F792461F1CF9D80047D760 /* ZRKMyselfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792451F1CF9D80047D760 /* ZRKMyselfViewController.m */; };
+		58F7924D1F1D15BF0047D760 /* ZRKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */; };
+		58F7924F1F1D166B0047D760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F7924E1F1D166B0047D760 /* Assets.xcassets */; };
+		58F792511F1D17240047D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F792501F1D17240047D760 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +44,6 @@
 		58F792031F1CEBDF0047D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58F792051F1CEBDF0047D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58F792061F1CEBDF0047D760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		58F792081F1CEBDF0047D760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		58F792091F1CEBDF0047D760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		58F7920C1F1CEBDF0047D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		58F7920E1F1CEBDF0047D760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		58F792111F1CEBDF0047D760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58F792131F1CEBDF0047D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58F792181F1CEBDF0047D760 /* FakeMomentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeMomentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F7921C1F1CEBDF0047D760 /* FakeMomentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeMomentsTests.m; sourceTree = "<group>"; };
@@ -51,6 +51,22 @@
 		58F792231F1CEBDF0047D760 /* FakeMomentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeMomentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F792271F1CEBDF0047D760 /* FakeMomentsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeMomentsUITests.m; sourceTree = "<group>"; };
 		58F792291F1CEBDF0047D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58F792351F1CECE00047D760 /* ZRKRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKRootTabBarController.h; sourceTree = "<group>"; };
+		58F792361F1CECE00047D760 /* ZRKRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKRootTabBarController.m; sourceTree = "<group>"; };
+		58F792381F1CF5BE0047D760 /* ZRKBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKBaseNavigationController.h; sourceTree = "<group>"; };
+		58F792391F1CF5BE0047D760 /* ZRKBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKBaseNavigationController.m; sourceTree = "<group>"; };
+		58F7923B1F1CF9AD0047D760 /* ZRKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKHomeViewController.h; sourceTree = "<group>"; };
+		58F7923C1F1CF9AD0047D760 /* ZRKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKHomeViewController.m; sourceTree = "<group>"; };
+		58F7923E1F1CF9BE0047D760 /* ZRKContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsViewController.h; sourceTree = "<group>"; };
+		58F7923F1F1CF9BE0047D760 /* ZRKContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKContactsViewController.m; sourceTree = "<group>"; };
+		58F792411F1CF9CC0047D760 /* ZRKDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKDiscoveryViewController.h; sourceTree = "<group>"; };
+		58F792421F1CF9CC0047D760 /* ZRKDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKDiscoveryViewController.m; sourceTree = "<group>"; };
+		58F792441F1CF9D80047D760 /* ZRKMyselfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKMyselfViewController.h; sourceTree = "<group>"; };
+		58F792451F1CF9D80047D760 /* ZRKMyselfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKMyselfViewController.m; sourceTree = "<group>"; };
+		58F7924B1F1D15BF0047D760 /* ZRKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKBaseViewController.h; sourceTree = "<group>"; };
+		58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKBaseViewController.m; sourceTree = "<group>"; };
+		58F7924E1F1D166B0047D760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58F792501F1D17240047D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +119,20 @@
 			children = (
 				58F792051F1CEBDF0047D760 /* AppDelegate.h */,
 				58F792061F1CEBDF0047D760 /* AppDelegate.m */,
-				58F792081F1CEBDF0047D760 /* ViewController.h */,
-				58F792091F1CEBDF0047D760 /* ViewController.m */,
-				58F7920B1F1CEBDF0047D760 /* Main.storyboard */,
-				58F7920E1F1CEBDF0047D760 /* Assets.xcassets */,
-				58F792101F1CEBDF0047D760 /* LaunchScreen.storyboard */,
+				58F792351F1CECE00047D760 /* ZRKRootTabBarController.h */,
+				58F792361F1CECE00047D760 /* ZRKRootTabBarController.m */,
+				58F792381F1CF5BE0047D760 /* ZRKBaseNavigationController.h */,
+				58F792391F1CF5BE0047D760 /* ZRKBaseNavigationController.m */,
+				58F7924B1F1D15BF0047D760 /* ZRKBaseViewController.h */,
+				58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */,
+				58F792441F1CF9D80047D760 /* ZRKMyselfViewController.h */,
+				58F792451F1CF9D80047D760 /* ZRKMyselfViewController.m */,
+				58F792411F1CF9CC0047D760 /* ZRKDiscoveryViewController.h */,
+				58F792421F1CF9CC0047D760 /* ZRKDiscoveryViewController.m */,
+				58F7923E1F1CF9BE0047D760 /* ZRKContactsViewController.h */,
+				58F7923F1F1CF9BE0047D760 /* ZRKContactsViewController.m */,
+				58F7923B1F1CF9AD0047D760 /* ZRKHomeViewController.h */,
+				58F7923C1F1CF9AD0047D760 /* ZRKHomeViewController.m */,
 				58F792131F1CEBDF0047D760 /* Info.plist */,
 				58F792021F1CEBDF0047D760 /* Supporting Files */,
 			);
@@ -118,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				58F792031F1CEBDF0047D760 /* main.m */,
+				58F7924E1F1D166B0047D760 /* Assets.xcassets */,
+				58F792501F1D17240047D760 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,9 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F792121F1CEBDF0047D760 /* LaunchScreen.storyboard in Resources */,
-				58F7920F1F1CEBDF0047D760 /* Assets.xcassets in Resources */,
-				58F7920D1F1CEBDF0047D760 /* Main.storyboard in Resources */,
+				58F7924F1F1D166B0047D760 /* Assets.xcassets in Resources */,
+				58F792511F1D17240047D760 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F7920A1F1CEBDF0047D760 /* ViewController.m in Sources */,
+				58F7923A1F1CF5BE0047D760 /* ZRKBaseNavigationController.m in Sources */,
 				58F792071F1CEBDF0047D760 /* AppDelegate.m in Sources */,
+				58F792401F1CF9BE0047D760 /* ZRKContactsViewController.m in Sources */,
+				58F792461F1CF9D80047D760 /* ZRKMyselfViewController.m in Sources */,
+				58F7923D1F1CF9AD0047D760 /* ZRKHomeViewController.m in Sources */,
+				58F792431F1CF9CC0047D760 /* ZRKDiscoveryViewController.m in Sources */,
+				58F7924D1F1D15BF0047D760 /* ZRKBaseViewController.m in Sources */,
 				58F792041F1CEBDF0047D760 /* main.m in Sources */,
+				58F792371F1CECE00047D760 /* ZRKRootTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,25 +344,6 @@
 			targetProxy = 58F792241F1CEBDF0047D760 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		58F7920B1F1CEBDF0047D760 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58F7920C1F1CEBDF0047D760 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		58F792101F1CEBDF0047D760 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58F792111F1CEBDF0047D760 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		58F7922A1F1CEBDF0047D760 /* Debug */ = {
