@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581DE65F1F2A217B001ED667 /* ZRKContactsDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */; };
+		58F5F8141F1E4CB300691840 /* ZRKHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F8131F1E4CB300691840 /* ZRKHomeCell.m */; };
+		58F5F8171F1F005D00691840 /* ZRKContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F8161F1F005D00691840 /* ZRKContactsCell.m */; };
+		58F5F81D1F1F504B00691840 /* ZRKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F81C1F1F504B00691840 /* ZRKDBManager.m */; };
+		58F5F8201F20449300691840 /* ZRKEditContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F81F1F20449300691840 /* ZRKEditContactsViewController.m */; };
+		58F5F8241F2054B300691840 /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F5F8231F2054B300691840 /* Contacts.xcassets */; };
+		58F5F82A1F20B81000691840 /* ZRKContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F8291F20B81000691840 /* ZRKContactsModel.m */; };
 		58F792041F1CEBDF0047D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792031F1CEBDF0047D760 /* main.m */; };
 		58F792071F1CEBDF0047D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F792061F1CEBDF0047D760 /* AppDelegate.m */; };
 		58F7921D1F1CEBDF0047D760 /* FakeMomentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7921C1F1CEBDF0047D760 /* FakeMomentsTests.m */; };
@@ -20,6 +27,7 @@
 		58F7924D1F1D15BF0047D760 /* ZRKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */; };
 		58F7924F1F1D166B0047D760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F7924E1F1D166B0047D760 /* Assets.xcassets */; };
 		58F792511F1D17240047D760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F792501F1D17240047D760 /* Images.xcassets */; };
+		B83720CCD23630DDC50D054A /* libPods-FakeMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480ACD6BBF006FBAAD38086 /* libPods-FakeMoments.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DE2AB8F20EBB0526166C0EB /* Pods-FakeMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-FakeMoments/Pods-FakeMoments.release.xcconfig"; sourceTree = "<group>"; };
+		581DE65D1F2A217B001ED667 /* ZRKContactsDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsDBManager.h; sourceTree = "<group>"; };
+		581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKContactsDBManager.m; sourceTree = "<group>"; };
+		58F5F8121F1E4CB300691840 /* ZRKHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKHomeCell.h; sourceTree = "<group>"; };
+		58F5F8131F1E4CB300691840 /* ZRKHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKHomeCell.m; sourceTree = "<group>"; };
+		58F5F8151F1F005D00691840 /* ZRKContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsCell.h; sourceTree = "<group>"; };
+		58F5F8161F1F005D00691840 /* ZRKContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKContactsCell.m; sourceTree = "<group>"; };
+		58F5F81B1F1F504B00691840 /* ZRKDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKDBManager.h; sourceTree = "<group>"; };
+		58F5F81C1F1F504B00691840 /* ZRKDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKDBManager.m; sourceTree = "<group>"; };
+		58F5F81E1F20449300691840 /* ZRKEditContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKEditContactsViewController.h; sourceTree = "<group>"; };
+		58F5F81F1F20449300691840 /* ZRKEditContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKEditContactsViewController.m; sourceTree = "<group>"; };
+		58F5F8231F2054B300691840 /* Contacts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Contacts.xcassets; sourceTree = "<group>"; };
+		58F5F8281F20B81000691840 /* ZRKContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsModel.h; sourceTree = "<group>"; };
+		58F5F8291F20B81000691840 /* ZRKContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKContactsModel.m; sourceTree = "<group>"; };
 		58F791FF1F1CEBDF0047D760 /* FakeMoments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeMoments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F792031F1CEBDF0047D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58F792051F1CEBDF0047D760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +89,8 @@
 		58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKBaseViewController.m; sourceTree = "<group>"; };
 		58F7924E1F1D166B0047D760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58F792501F1D17240047D760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F41CA90943D2899E35C718C /* Pods-FakeMoments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeMoments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FakeMoments/Pods-FakeMoments.debug.xcconfig"; sourceTree = "<group>"; };
+		B480ACD6BBF006FBAAD38086 /* libPods-FakeMoments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FakeMoments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83720CCD23630DDC50D054A /* libPods-FakeMoments.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +119,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CEC0B7D432C875CB6AB0169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B480ACD6BBF006FBAAD38086 /* libPods-FakeMoments.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		581DE65A1F28D80E001ED667 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				581DE65B1F28D813001ED667 /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		581DE65B1F28D813001ED667 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				58F5F8151F1F005D00691840 /* ZRKContactsCell.h */,
+				58F5F8161F1F005D00691840 /* ZRKContactsCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		581DE65C1F2A1975001ED667 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58F5F8281F20B81000691840 /* ZRKContactsModel.h */,
+				58F5F8291F20B81000691840 /* ZRKContactsModel.m */,
+				581DE65D1F2A217B001ED667 /* ZRKContactsDBManager.h */,
+				581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		58F5F8101F1E4C6B00691840 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				58F5F8121F1E4CB300691840 /* ZRKHomeCell.h */,
+				58F5F8131F1E4CB300691840 /* ZRKHomeCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		58F5F8111F1E4C8600691840 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58F5F8101F1E4C6B00691840 /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		58F5F81A1F1F4F9A00691840 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58F5F81B1F1F504B00691840 /* ZRKDBManager.h */,
+				58F5F81C1F1F504B00691840 /* ZRKDBManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		58F791F61F1CEBDF0047D760 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +188,8 @@
 				58F7921B1F1CEBDF0047D760 /* FakeMomentsTests */,
 				58F792261F1CEBDF0047D760 /* FakeMomentsUITests */,
 				58F792001F1CEBDF0047D760 /* Products */,
+				B34EE7DC9E13C5FB02D8C008 /* Pods */,
+				2CEC0B7D432C875CB6AB0169 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,20 +208,9 @@
 			children = (
 				58F792051F1CEBDF0047D760 /* AppDelegate.h */,
 				58F792061F1CEBDF0047D760 /* AppDelegate.m */,
-				58F792351F1CECE00047D760 /* ZRKRootTabBarController.h */,
-				58F792361F1CECE00047D760 /* ZRKRootTabBarController.m */,
-				58F792381F1CF5BE0047D760 /* ZRKBaseNavigationController.h */,
-				58F792391F1CF5BE0047D760 /* ZRKBaseNavigationController.m */,
-				58F7924B1F1D15BF0047D760 /* ZRKBaseViewController.h */,
-				58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */,
-				58F792441F1CF9D80047D760 /* ZRKMyselfViewController.h */,
-				58F792451F1CF9D80047D760 /* ZRKMyselfViewController.m */,
-				58F792411F1CF9CC0047D760 /* ZRKDiscoveryViewController.h */,
-				58F792421F1CF9CC0047D760 /* ZRKDiscoveryViewController.m */,
-				58F7923E1F1CF9BE0047D760 /* ZRKContactsViewController.h */,
-				58F7923F1F1CF9BE0047D760 /* ZRKContactsViewController.m */,
-				58F7923B1F1CF9AD0047D760 /* ZRKHomeViewController.h */,
-				58F7923C1F1CF9AD0047D760 /* ZRKHomeViewController.m */,
+				58F792591F1D99AC0047D760 /* Controllers */,
+				58F5F81A1F1F4F9A00691840 /* Model */,
+				58F5F8111F1E4C8600691840 /* Views */,
 				58F792131F1CEBDF0047D760 /* Info.plist */,
 				58F792021F1CEBDF0047D760 /* Supporting Files */,
 			);
@@ -145,6 +223,7 @@
 				58F792031F1CEBDF0047D760 /* main.m */,
 				58F7924E1F1D166B0047D760 /* Assets.xcassets */,
 				58F792501F1D17240047D760 /* Images.xcassets */,
+				58F5F8231F2054B300691840 /* Contacts.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,6 +246,72 @@
 			path = FakeMomentsUITests;
 			sourceTree = "<group>";
 		};
+		58F792521F1D99490047D760 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				58F7923B1F1CF9AD0047D760 /* ZRKHomeViewController.h */,
+				58F7923C1F1CF9AD0047D760 /* ZRKHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		58F792561F1D99790047D760 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				58F792411F1CF9CC0047D760 /* ZRKDiscoveryViewController.h */,
+				58F792421F1CF9CC0047D760 /* ZRKDiscoveryViewController.m */,
+			);
+			name = Discovery;
+			sourceTree = "<group>";
+		};
+		58F792571F1D998E0047D760 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				58F7923E1F1CF9BE0047D760 /* ZRKContactsViewController.h */,
+				58F7923F1F1CF9BE0047D760 /* ZRKContactsViewController.m */,
+				58F5F81E1F20449300691840 /* ZRKEditContactsViewController.h */,
+				58F5F81F1F20449300691840 /* ZRKEditContactsViewController.m */,
+				581DE65A1F28D80E001ED667 /* Views */,
+				581DE65C1F2A1975001ED667 /* Models */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		58F792581F1D99940047D760 /* Myself */ = {
+			isa = PBXGroup;
+			children = (
+				58F792441F1CF9D80047D760 /* ZRKMyselfViewController.h */,
+				58F792451F1CF9D80047D760 /* ZRKMyselfViewController.m */,
+			);
+			name = Myself;
+			sourceTree = "<group>";
+		};
+		58F792591F1D99AC0047D760 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58F792351F1CECE00047D760 /* ZRKRootTabBarController.h */,
+				58F792361F1CECE00047D760 /* ZRKRootTabBarController.m */,
+				58F792381F1CF5BE0047D760 /* ZRKBaseNavigationController.h */,
+				58F792391F1CF5BE0047D760 /* ZRKBaseNavigationController.m */,
+				58F7924B1F1D15BF0047D760 /* ZRKBaseViewController.h */,
+				58F7924C1F1D15BF0047D760 /* ZRKBaseViewController.m */,
+				58F792521F1D99490047D760 /* Home */,
+				58F792571F1D998E0047D760 /* Contacts */,
+				58F792561F1D99790047D760 /* Discovery */,
+				58F792581F1D99940047D760 /* Myself */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B34EE7DC9E13C5FB02D8C008 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CA90943D2899E35C718C /* Pods-FakeMoments.debug.xcconfig */,
+				2DE2AB8F20EBB0526166C0EB /* Pods-FakeMoments.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58F7922C1F1CEBDF0047D760 /* Build configuration list for PBXNativeTarget "FakeMoments" */;
 			buildPhases = (
+				8A97B7145B5CA261E7D3CC3E /* [CP] Check Pods Manifest.lock */,
 				58F791FB1F1CEBDF0047D760 /* Sources */,
 				58F791FC1F1CEBDF0047D760 /* Frameworks */,
 				58F791FD1F1CEBDF0047D760 /* Resources */,
+				E98CC288F2E0CFD53FD16B3C /* [CP] Embed Pods Frameworks */,
+				3E7AB740C900E198A86F1C9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F5F8241F2054B300691840 /* Contacts.xcassets in Resources */,
 				58F7924F1F1D166B0047D760 /* Assets.xcassets in Resources */,
 				58F792511F1D17240047D760 /* Images.xcassets in Resources */,
 			);
@@ -297,16 +446,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E7AB740C900E198A86F1C9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FakeMoments/Pods-FakeMoments-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A97B7145B5CA261E7D3CC3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E98CC288F2E0CFD53FD16B3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FakeMoments/Pods-FakeMoments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58F791FB1F1CEBDF0047D760 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				58F7923A1F1CF5BE0047D760 /* ZRKBaseNavigationController.m in Sources */,
+				58F5F81D1F1F504B00691840 /* ZRKDBManager.m in Sources */,
+				58F5F8171F1F005D00691840 /* ZRKContactsCell.m in Sources */,
 				58F792071F1CEBDF0047D760 /* AppDelegate.m in Sources */,
+				58F5F8141F1E4CB300691840 /* ZRKHomeCell.m in Sources */,
 				58F792401F1CF9BE0047D760 /* ZRKContactsViewController.m in Sources */,
+				58F5F82A1F20B81000691840 /* ZRKContactsModel.m in Sources */,
 				58F792461F1CF9D80047D760 /* ZRKMyselfViewController.m in Sources */,
+				581DE65F1F2A217B001ED667 /* ZRKContactsDBManager.m in Sources */,
 				58F7923D1F1CF9AD0047D760 /* ZRKHomeViewController.m in Sources */,
+				58F5F8201F20449300691840 /* ZRKEditContactsViewController.m in Sources */,
 				58F792431F1CF9CC0047D760 /* ZRKDiscoveryViewController.m in Sources */,
 				58F7924D1F1D15BF0047D760 /* ZRKBaseViewController.m in Sources */,
 				58F792041F1CEBDF0047D760 /* main.m in Sources */,
@@ -438,6 +641,7 @@
 		};
 		58F7922D1F1CEBDF0047D760 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F41CA90943D2899E35C718C /* Pods-FakeMoments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76X28RC49S;
@@ -450,6 +654,7 @@
 		};
 		58F7922E1F1CEBDF0047D760 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE2AB8F20EBB0526166C0EB /* Pods-FakeMoments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76X28RC49S;
@@ -529,6 +734,7 @@
 				58F7922E1F1CEBDF0047D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58F7922F1F1CEBDF0047D760 /* Build configuration list for PBXNativeTarget "FakeMomentsTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +743,7 @@
 				58F792311F1CEBDF0047D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58F792321F1CEBDF0047D760 /* Build configuration list for PBXNativeTarget "FakeMomentsUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +752,7 @@
 				58F792341F1CEBDF0047D760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,4 +10,9 @@
 
 @interface ZRKBaseViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
+
+- (void)registerCellWithClass:(NSString *)className tableView:(UITableView *)tabelView;
+
 @end

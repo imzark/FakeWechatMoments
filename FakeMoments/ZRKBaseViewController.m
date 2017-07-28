@@ -8,7 +8,7 @@
 
 #import "ZRKBaseViewController.h"
 
-@interface ZRKBaseViewController ()
+@interface ZRKBaseViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -16,12 +16,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
+
+}
+
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+        _tableView.tableFooterView = [[UIView alloc] init];  // 末尾变空白
+    }
+    return _tableView;
+}
+
+- (void)registerCellWithClass:(NSString *)className tableView:(UITableView *)tabelView {
+    [tabelView registerClass:NSClassFromString(className) forCellReuseIdentifier:className];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - TableView delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 /*
