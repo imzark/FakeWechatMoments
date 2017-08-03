@@ -18,7 +18,6 @@ typedef enum : NSUInteger {
 
 @interface ZRKEditContactsViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, assign) NSInteger dataId;
 @property (nonatomic, strong) UITextField *nameTextField;
 @property (nonatomic, strong) UITextField *briefTextField;
 @property (nonatomic, strong) UITextField *picUrlTextField;
@@ -28,7 +27,11 @@ typedef enum : NSUInteger {
 
 static NSString *const dbFileName = @"zarkyContactsInfo.sql";
 
+
+
 @implementation ZRKEditContactsViewController
+
+#pragma mark - LifeCircle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,24 +44,28 @@ static NSString *const dbFileName = @"zarkyContactsInfo.sql";
     
 }
 
-- (void)initTextField {
-    _nameTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    _briefTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    _picUrlTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    
-    _nameTextField.delegate = self;
-    _briefTextField.delegate = self;
-    _picUrlTextField.delegate = self;
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
-    _nameTextField.placeholder = @"Name";
-    _briefTextField.placeholder = @"Brief";
-    _picUrlTextField.placeholder = @"PicUrl";
+#pragma mark - Pravite
+
+- (void)initTextField {
+
+    self.nameTextField.delegate = self;
+    self.briefTextField.delegate = self;
+    self.picUrlTextField.delegate = self;
+
+    self.nameTextField.placeholder = @"Name";
+    self.briefTextField.placeholder = @"Brief";
+    self.picUrlTextField.placeholder = @"PicUrl";
     
-    _nameTextField.backgroundColor = [UIColor grayColor];
-    _briefTextField.backgroundColor = [UIColor greenColor];
-    _picUrlTextField.backgroundColor = [UIColor redColor];
+    self.nameTextField.backgroundColor = [UIColor grayColor];
+    self.briefTextField.backgroundColor = [UIColor greenColor];
+    self.picUrlTextField.backgroundColor = [UIColor redColor];
     
-    _picUrlTextField.enabled = false;
+    self.picUrlTextField.enabled = false;
     
     [self.view addSubview:_nameTextField];
     [self.view addSubview:_briefTextField];
@@ -98,45 +105,32 @@ static NSString *const dbFileName = @"zarkyContactsInfo.sql";
         return;
     } else {
         _nameTextField.placeholder = @"Name";
+    }
+    self.model.name = self.nameTextField.text;
+    self.model.brief = self.briefTextField.text;
+    self.model.picUrl = self.picUrlTextField.text;
 
-        if (!_dataId) {
-            [_dbManager insertDataWithArray:[NSArray arrayWithObjects:_nameTextField.text,_briefTextField.text,_picUrlTextField.text, nil]];
-            
-            //add
-            
-            if ([_delegate respondsToSelector:@selector(editContactControllerDidEditContactData:)]) {
-
-            
-            [self.navigationController popViewControllerAnimated:YES];
-
-        } else {
-            NSArray *dataArray = [NSArray arrayWithObjects:_nameTextField.text,_briefTextField.text,_picUrlTextField.text, _dataId, nil];
-            [_dbManager updateDataWithArray:dataArray];
+    if (!self.model.userId) {
+        // add
+        BOOL succ = [_dbManager insertContactsModel:self.model];
         
-            if ([_delegate respondsToSelector:@selector(editContactControllerDidEditContactData:)]) {
-                
-                ZRKContactsModel *model = [[ZRKContactsModel alloc] init];
-                model.name = dataArray[0];
-                model.brief = dataArray[1];
-                model.picUrl = dataArray[2];
-                model.userId = (int)dataArray[3];
-                [_delegate editContactControllerDidEditContactData:model];
-            }
+        if (succ && [_delegate respondsToSelector:@selector(editContactControllerDidAddContactData:)]) {
+            [_delegate editContactControllerDidAddContactData:self.model];
             [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            NSLog(@"Insert Data Failed");
+        }
+    } else {
+        // update
+        BOOL succ = [_dbManager updateContactsModel:self.model];
+    
+        if (succ && [_delegate respondsToSelector:@selector(editContactControllerDidEditContactData:)]) {
+            [_delegate editContactControllerDidEditContactData:self.model];
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            NSLog(@"Update Data Failed");
         }
     }
-}
-
-- (void)updateData:(NSArray *)textArray {
-    _dataId = (NSInteger)[textArray objectAtIndex:0];
-    _nameTextField.text = [textArray objectAtIndex:1];
-    _briefTextField.text = [textArray objectAtIndex:2];
-    _picUrlTextField.text = [textArray objectAtIndex:3];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - TextField Delegate
@@ -145,14 +139,48 @@ static NSString *const dbFileName = @"zarkyContactsInfo.sql";
     [textField resignFirstResponder];
     return YES;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Setters & Getters
+
+
+@synthesize model = _model;
+- (void)setModel:(ZRKContactsModel *)model {
+    if (!_model) {
+        _model = [[ZRKContactsModel alloc] init];
+    }
+    _model = model;
+    self.nameTextField.text = self.model.name ? : @"";
+    self.briefTextField.text = self.model.brief? : @"";
+    self.picUrlTextField.text = self.model.picUrl? : @"";
 }
-*/
+
+- (ZRKContactsModel *)model {
+    if (!_model) {
+        _model = [[ZRKContactsModel alloc] init];
+    }
+    return _model;
+}
+
+- (UITextField *)nameTextField {
+    if (!_nameTextField) {
+        _nameTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+    }
+    return _nameTextField;
+}
+
+- (UITextField *)briefTextField {
+    if (!_briefTextField) {
+        _briefTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+    }
+    return _briefTextField;
+}
+
+- (UITextField *)picUrlTextField {
+    if (!_picUrlTextField) {
+        _picUrlTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+    }
+    return _picUrlTextField;
+}
+
 
 @end

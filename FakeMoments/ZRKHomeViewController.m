@@ -31,7 +31,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - TableView Delegate
+#pragma mark - TableView Delegate & DataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -49,5 +49,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
+
+
 
 @end

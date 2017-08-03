@@ -9,12 +9,12 @@
 #import "ZRKContactsViewController.h"
 #import "ZRKContactsCell.h"
 #import "ZRKEditContactsViewController.h"
-#import "ZRKContactsDBManager.h"
+#import "ZRKDBManager.h"
 #import "ZRKContactsModel.h"
 
 @interface ZRKContactsViewController () <ZRKEditContactsDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) ZRKContactsDBManager *dbManager;
+@property (nonatomic, strong) ZRKDBManager *dbManager;
 @property (nonatomic, strong) NSMutableArray<ZRKContactsModel *> *resArray;
 
 @end
@@ -24,14 +24,22 @@ static const CGFloat kTableViewCellHeight = 55;
 
 @implementation ZRKContactsViewController
 
+#pragma mark - Life Circle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _dbManager = [[ZRKContactsDBManager alloc] initWithDataBaseFileName:dbFileName];
+    _dbManager = [[ZRKDBManager alloc] initWithDataBaseFileName:dbFileName];
     [self loadDataFromDB];
     [self setupTableView];
     [self setupNaviBar];
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Pravite
 
 - (void)setupTableView {
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
@@ -58,29 +66,28 @@ static const CGFloat kTableViewCellHeight = 55;
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 #pragma mark - ZRKEditContactsDelegate
 
 - (void)editContactControllerDidAddContactData:(ZRKContactsModel *)model {
-    
     [self.dataSource addObject:model];
     [self.tableView reloadData];
 }
 
-/*
-#pragma mark - Navigation
+- (void)editContactControllerDidEditContactData:(ZRKContactsModel *)model {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [[NSIndexPath alloc] init];
+
+    for (NSUInteger i = 0; i<self.dataSource.count; i++) {
+        ZRKContactsModel *m = self.dataSource[i];
+        if (m.userId == model.userId) {
+            NSIndexPath *indexP = [NSIndexPath indexPathForRow:i inSection:0];
+            indexPath = indexP;
+            self.dataSource[i] = model;
+        }
+    }
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
 }
-*/
+
 #pragma mark - TableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -103,22 +110,16 @@ static const CGFloat kTableViewCellHeight = 55;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"用户" message:@"这是一段Alert提醒" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-    [alertVC addAction:okAction];
-    [self presentViewController:alertVC animated:YES completion:nil];
+//    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"用户" message:@"这是一段Alert提醒" preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+//    [alertVC addAction:okAction];
+//    [self presentViewController:alertVC animated:YES completion:nil];
     
+    ZRKEditContactsViewController *vc = [[ZRKEditContactsViewController alloc] init];
+    vc.delegate = self;
+    vc.model = self.dataSource[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ZRKEditContactsViewController *vc = [[ZRKEditContactsViewController alloc] init];
-//    // NEED A MODEL............
-//    // dataSource = modelArray
-//}
-
-
 
 @end

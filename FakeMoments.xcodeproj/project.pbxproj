@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		581DE65F1F2A217B001ED667 /* ZRKContactsDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */; };
 		58F5F8141F1E4CB300691840 /* ZRKHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F8131F1E4CB300691840 /* ZRKHomeCell.m */; };
 		58F5F8171F1F005D00691840 /* ZRKContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F8161F1F005D00691840 /* ZRKContactsCell.m */; };
 		58F5F81D1F1F504B00691840 /* ZRKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F81C1F1F504B00691840 /* ZRKDBManager.m */; };
@@ -49,8 +48,6 @@
 
 /* Begin PBXFileReference section */
 		2DE2AB8F20EBB0526166C0EB /* Pods-FakeMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-FakeMoments/Pods-FakeMoments.release.xcconfig"; sourceTree = "<group>"; };
-		581DE65D1F2A217B001ED667 /* ZRKContactsDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsDBManager.h; sourceTree = "<group>"; };
-		581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKContactsDBManager.m; sourceTree = "<group>"; };
 		58F5F8121F1E4CB300691840 /* ZRKHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKHomeCell.h; sourceTree = "<group>"; };
 		58F5F8131F1E4CB300691840 /* ZRKHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKHomeCell.m; sourceTree = "<group>"; };
 		58F5F8151F1F005D00691840 /* ZRKContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKContactsCell.h; sourceTree = "<group>"; };
@@ -149,8 +146,6 @@
 			children = (
 				58F5F8281F20B81000691840 /* ZRKContactsModel.h */,
 				58F5F8291F20B81000691840 /* ZRKContactsModel.m */,
-				581DE65D1F2A217B001ED667 /* ZRKContactsDBManager.h */,
-				581DE65E1F2A217B001ED667 /* ZRKContactsDBManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -507,7 +502,6 @@
 				58F792401F1CF9BE0047D760 /* ZRKContactsViewController.m in Sources */,
 				58F5F82A1F20B81000691840 /* ZRKContactsModel.m in Sources */,
 				58F792461F1CF9D80047D760 /* ZRKMyselfViewController.m in Sources */,
-				581DE65F1F2A217B001ED667 /* ZRKContactsDBManager.m in Sources */,
 				58F7923D1F1CF9AD0047D760 /* ZRKHomeViewController.m in Sources */,
 				58F5F8201F20449300691840 /* ZRKEditContactsViewController.m in Sources */,
 				58F792431F1CF9CC0047D760 /* ZRKDiscoveryViewController.m in Sources */,
@@ -647,7 +641,7 @@
 				DEVELOPMENT_TEAM = 76X28RC49S;
 				INFOPLIST_FILE = FakeMoments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zarky.FakeMoments;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zarky.GifDetectAndLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -660,7 +654,7 @@
 				DEVELOPMENT_TEAM = 76X28RC49S;
 				INFOPLIST_FILE = FakeMoments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zarky.FakeMoments;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zarky.GifDetectAndLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

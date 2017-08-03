@@ -14,13 +14,13 @@
 @protocol ZRKEditContactsDelegate <NSObject>
 
 - (void)editContactControllerDidAddContactData:(ZRKContactsModel *)model;
+- (void)editContactControllerDidEditContactData:(ZRKContactsModel *)model;
 
 @end
 
 @interface ZRKEditContactsViewController : UIViewController
 
 @property (nonatomic, weak) id<ZRKEditContactsDelegate> delegate;
-
-- (void)updateData:(NSArray *)textArray;
+@property (nonatomic, strong) ZRKContactsModel *model;
 
 @end

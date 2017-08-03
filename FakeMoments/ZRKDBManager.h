@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class ZRKContactsModel;
+
 @interface ZRKDBManager : NSObject
 
 - (instancetype)initWithDataBaseFileName: (NSString *)dbFileName;
-- (void)insertDataWithArray:(NSArray *)dataArray;
-- (void)updateDataWithArray:(NSArray *)dataArray;
-- (NSArray *)queryData;
+- (NSArray *)queryContactsModelsArray;
+- (BOOL)insertContactsModel:(ZRKContactsModel *)model;
+- (BOOL)updateContactsModel:(ZRKContactsModel *)model;
 
 @end
